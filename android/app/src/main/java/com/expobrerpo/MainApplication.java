@@ -43,7 +43,8 @@ public class MainApplication extends Application implements ReactApplication {
           new ReanimatedPackage(),
           new RNGestureHandlerPackage(),
           new RNScreensPackage(),
-          new ModuleRegistryAdapter(mModuleRegistryProvider)
+          new ModuleRegistryAdapter(mModuleRegistryProvider),
+          new MapsPackage()
       );
     }
 

@@ -144,12 +144,13 @@ def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 
 dependencies {
-    implementation project(':react-native-screens')
-    implementation project(':react-native-reanimated')
-    implementation project(':react-native-gesture-handler')
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.facebook.react:react-native:+"  // From node_modules
+    compile project(':react-native-screens')
+    compile project(':react-native-reanimated')
+    compile project(':react-native-gesture-handler')
+    compile fileTree(dir: "libs", include: ["*.jar"])
+    compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
+    compile "com.facebook.react:react-native:+"  // From node_modules
+    compile project(':react-native-maps')
     addUnimodulesDependencies()
 
     if (enableHermes) {
