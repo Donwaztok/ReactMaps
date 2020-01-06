@@ -73,11 +73,18 @@ export default class App extends Component {
 						style={[styles.map, { marginBottom: this.state.bottomMargin }]}
 						region={this.state.mapRegion}
 						showsUserLocation={true}
+						followsUserLocation={true}
+						showsCompass={true}
+						zoomControlEnabled={true}
+						showsScale={true}
+						showsBuildings={true}
+						showsTraffic={true}
+						showsIndoors={true}
 						onMapReady={() => this.setState({ bottomMargin: 0 })}>
 						<MapView.Marker
 							coordinate={{
-								latitude: (this.state.lastLat + 0.00050) || -36.82339,
-								longitude: (this.state.lastLong + 0.00050) || -73.03569,
+								latitude: (this.state.lastLat + 1.00050) || -36.82339,
+								longitude: (this.state.lastLong + 1.00050) || -73.03569,
 							}}>
 							<View>
 								<Text style={{ color: '#000' }}>
@@ -94,7 +101,6 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
 	map: {
-		height: 100,
 		flex: 1
 	}
 });
