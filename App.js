@@ -6,7 +6,7 @@ import MapView from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
 import getDirections from 'react-native-google-maps-directions';
 
-const GOOGLE_MAPS_APIKEY = 'AIzaSyASspOu0rSMaUOR28MNDZlkEhspkWnKkJo';
+const GOOGLE_MAPS_APIKEY = '';
 
 export default class App extends Component {
 	state = {
